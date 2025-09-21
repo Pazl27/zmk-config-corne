@@ -6,54 +6,107 @@
 
 #include <behaviors.dtsi>
 #include <dt-bindings/zmk/keys.h>
+#include <dt-bindings/zmk/keys_de.h>
 #include <dt-bindings/zmk/bt.h>
+
+/ {
+    behaviors {
+        alt_f4: alt_f4 {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings = <&kp LALT &kp F4>;
+        };
+    };
+};
+
 
 / {
         keymap {
                 compatible = "zmk,keymap";
 
                 default_layer {
-                        display-name = "Default Layer";
-// -----------------------------------------------------------------------------------------
-// |  TAB |  Q  |  W  |  E  |  R  |  T  |   |  Y  |  U   |  I  |  O  |  P  | BSPC |
-// | CTRL |  A  |  S  |  D  |  F  |  G  |   |  H  |  J   |  K  |  L  |  ;  |  '   |
-// | SHFT |  Z  |  X  |  C  |  V  |  B  |   |  N  |  M   |  ,  |  .  |  /  | ESC  |
-//                    | GUI | LWR | SPC |   | ENT | RSE  | ALT |
-                        bindings = <
-   &kp TAB   &kp Q &kp W &kp E &kp R &kp T   &kp Y &kp U  &kp I     &kp O   &kp P    &kp BSPC
-   &kp LCTRL &kp A &kp S &kp D &kp F &kp G   &kp H &kp J  &kp K     &kp L   &kp SEMI &kp SQT
-   &kp LSHFT &kp Z &kp X &kp C &kp V &kp B   &kp N &kp M  &kp COMMA &kp DOT &kp FSLH &kp ESC
-                  &kp LGUI &mo 1 &kp SPACE   &kp RET &mo 2 &kp RALT
-                        >;
+                display-name = "Default Layer";
+
+                // ──────────────────────────────────────────────────────────────────────────────
+                // |      |  Q  |  W  |  E  |  R  |  T  |   |  Z  |  U  |  I  |  O  |  P  | Bksp |
+                // |Sh/Tab|  A  |  S  |  D  |  F  |  G  |   |  H  |  J  |  K  |  L  |  +  | En/Sh|
+                // |      |  Y  |  X  |  C  |  V  |  B  |   |  N  |  M  |  ,  |  .  |  -  |      |
+                //              | Raise | Lower | Space |   | Esc/GUI | Ctrl | Alt |
+                // ──────────────────────────────────────────────────────────────────────────────
+
+                bindings = <
+                        // Row 1
+                        &trans         &kp Q        &kp W        &kp E        &kp R        &kp T
+                        &kp DE_Z       &kp U        &kp I        &kp O        &kp P        &kp BSPC
+
+                        // Row 2
+                        &mt LSHFT TAB  &kp A        &kp S        &kp D        &kp F        &kp G
+                        &kp H          &kp J        &kp K        &kp L        &kp DE_PLUS  &mt LSHFT RET
+
+                        // Row 3
+                        &trans         &kp DE_Y     &kp X        &kp C        &kp V        &kp B
+                        &kp N          &kp M        &kp DE_COMMA &kp DE_DOT   &kp DE_MINUS &trans
+
+                        // Thumbs
+                                        &mo 2      &mo 1        &kp SPACE    &mt LGUI ESC &kp LCTRL &kp RALT
+                >;
                 };
+
                 lower_layer {
-                        display-name = "Lower Layer";
-// -----------------------------------------------------------------------------------------
-// |  TAB |  1  |  2  |  3  |  4  |  5  |   |  6  |  7  |  8  |  9  |  0  | BSPC |
-// | BTCLR| BT1 | BT2 | BT3 | BT4 | BT5 |   | LFT | DWN |  UP | RGT |     |      |
-// | SHFT |     |     |     |     |     |   |     |     |     |     |     |      |
-//                    | GUI |     | SPC |   | ENT |     | ALT |
-                        bindings = <
-   &kp TAB    &kp N1       &kp N2       &kp N3       &kp N4       &kp N5         &kp N6   &kp N7   &kp N8 &kp N9    &kp N0 &kp BSPC
-   &bt BT_CLR &bt BT_SEL 0 &bt BT_SEL 1 &bt BT_SEL 2 &bt BT_SEL 3 &bt BT_SEL 4   &kp LEFT &kp DOWN &kp UP &kp RIGHT &trans &trans
-   &kp LSHFT  &trans       &trans       &trans       &trans       &trans         &trans   &trans   &trans &trans    &trans &trans
-                                    &kp LGUI     &trans       &kp SPACE      &kp RET  &trans   &kp RALT
-                        >;
+                display-name = "Lower Layer";
+
+                // ──────────────────────────────────────────────────────────────────────────────
+                // |    |   |  !  |  "  |  §  |  $  |  %  |   |  &  |  /  |  (  |  )  |  ?  | Bksp |
+                // | Sh/Tab |  1  |  2  |  3  |  4  |  5  |   |  =  |  \  |  {  |  }  |  #  | Sh/Enter |
+                // |        |  6  |  7  |  8  |  9  |  0  |   |  <  |  >  |  [  |  ]  |  ~  |      |
+                //                |       |       | Space |   | Esc/GUI | Ctrl | Alt |
+                // ──────────────────────────────────────────────────────────────────────────────
+
+                bindings = <
+                        /* Row 1 */
+                        &kp DE_PIPE    &kp DE_EXLM   &kp DE_DQOT  &kp DE_SECT  &kp DE_DLR   &kp DE_PERC
+                        &kp DE_AMPR    &kp DE_SLSH   &kp DE_LPAR  &kp DE_RPAR  &kp DE_QST   &kp BSPC
+
+                        /* Row 2 */
+                        &mt LSHFT TAB  &kp N1       &kp N2       &kp N3       &kp N4       &kp N5
+                        &kp DE_EQL     &kp DE_BSLS  &kp DE_LCBR  &kp DE_RCBR  &kp DE_HASH  &mt LSHFT RET
+
+                        /* Row 3 */
+                        &trans         &kp N6       &kp N7       &kp N8       &kp N9       &kp N0
+                        &kp DE_LABK    &kp DE_RABK  &kp DE_LBKT  &kp DE_RBKT  &kp DE_TILD  &trans
+
+                        /* Thumbs */
+                                        &trans      &trans       &kp SPACE    &mt LGUI ESC &kp LCTRL &kp RALT
+                >;
                 };
 
                 raise_layer {
-                        display-name = "Raise Layer";
-// -----------------------------------------------------------------------------------------
-// |  TAB |  !  |  @  |  #  |  $  |  %  |   |  ^  |  &  |  *  |  (  |  )  | BSPC |
-// | CTRL |     |     |     |     |     |   |  -  |  =  |  [  |  ]  |  \  |  `   |
-// | SHFT |     |     |     |     |     |   |  _  |  +  |  {  |  }  | "|" |  ~   |
-//                    | GUI |     | SPC |   | ENT |     | ALT |
-                        bindings = <
-   &kp  TAB  &kp EXCL &kp AT &kp HASH &kp DLLR &kp PRCNT   &kp CARET &kp AMPS  &kp ASTRK &kp LPAR &kp RPAR &kp BSPC
-   &kp LCTRL &trans   &trans &trans   &trans   &trans      &kp MINUS &kp EQUAL &kp LBKT  &kp RBKT &kp BSLH &kp GRAVE
-   &kp LSHFT &trans   &trans &trans   &trans   &trans      &kp UNDER &kp PLUS  &kp LBRC  &kp RBRC &kp PIPE &kp TILDE
-                             &kp LGUI &trans   &kp SPACE   &kp RET   &trans    &kp RALT
-                        >;
+                display-name = "Raise Layer";
+
+                // ──────────────────────────────────────────────────────────────────────────────
+                // |   ^   |   @   | Alt+F4|   €  |        |       |   |       |   Ü   |       |   Ö   |       | Delete|
+                // | Sh/Tab|   Ä   |   ß   |      | Prev   | Next  |   |  Left | Down  |  Up   | Right |       | Sh/Enter |
+                // |       | Mute  | Vol-  | Vol+ | Stop   | Play  |   |   ´   |   `   |       |       |       |      |
+                //                         |       |       | Space |   | Esc/GUI | Ctrl | Alt |
+                // ──────────────────────────────────────────────────────────────────────────────
+
+                bindings = <
+                        /* Row 1 */
+                        &kp DE_CIRC     &kp DE_AT       &alt_f4        &kp CURRENCY_EURO   &trans       &trans
+                        &trans          &kp DE_UDIA     &trans         &kp DE_ODIA         &trans       &kp DEL
+
+                        /* Row 2 */
+                        &mt LSHFT TAB   &kp DE_ADIA     &kp DE_SS      &trans              &kp C_PREV   &kp C_NEXT
+                        &kp LEFT        &kp DOWN        &kp UP         &kp RIGHT           &trans       &mt LSHFT RET
+
+                        /* Row 3 */
+                        &trans          &kp C_MUTE      &kp C_VOL_DN   &kp C_VOL_UP        &kp C_STOP   &kp C_PLAY_PAUSE
+                        &kp DE_ACUT     &kp DE_GRV      &trans         &trans              &trans       &trans
+
+                        /* Thumbs */
+                                          &trans        &trans         &kp SPACE           &mt LGUI ESC &kp LCTRL &kp RALT
+                >;
                 };
+
         };
 };
