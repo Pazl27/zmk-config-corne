@@ -14,7 +14,9 @@
         alt_f4: alt_f4 {
             compatible = "zmk,behavior-macro";
             #binding-cells = <0>;
-            bindings = <&kp LALT &kp F4>;
+            wait-ms = <10>;
+            tap-ms = <10>;
+            bindings = <&macro_press &kp LALT>, <&macro_tap &kp F4>, <&macro_release &kp LALT>;
         };
     };
 };
@@ -61,7 +63,7 @@
                         &kp N          &kp M        &kp DE_COMMA &kp DE_DOT   &kp DE_MINUS &trans
 
                         // Thumbs
-                                        &mo 2      &mo 1        &kp SPACE    &mt LGUI ESC &kp LCTRL &kp RALT
+                                        &mo 2      &mo 1        &kp SPACE    &mt LGUI ESC &kp LCTRL &kp LALT
                 >;
                 };
 
@@ -89,7 +91,7 @@
                         &kp DE_LT      &kp DE_GT    &kp DE_LBKT  &kp DE_RBKT  &kp DE_TILDE &trans
 
                         /* Thumbs */
-                                        &trans      &trans       &kp SPACE    &mt LGUI ESC &kp LCTRL &kp RALT
+                                        &trans      &trans       &kp SPACE    &mt LGUI ESC &kp LCTRL &kp LALT
                 >;
                 };
 
@@ -117,7 +119,7 @@
                         &kp DE_ACUTE    &kp DE_GRAVE    &trans         &trans              &trans       &trans
 
                         /* Thumbs */
-                                          &trans        &trans         &kp SPACE           &mt LGUI ESC &kp LCTRL &kp RALT
+                                          &trans        &trans         &kp SPACE           &mt LGUI ESC &kp LCTRL &kp LALT
                 >;
                 };
 
