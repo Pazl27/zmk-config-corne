@@ -21,6 +21,19 @@
 
 
 / {
+    combos {
+        compatible = "zmk,combos";
+
+        bt_combo {
+            timeout-ms = <50>;
+            key-positions = <30 31>; // positions of Lower and Raise keys
+            bindings = <&mo 3>;      // switch to BT layer (layer index 3)
+        };
+    };
+};
+
+
+/ {
         keymap {
                 compatible = "zmk,keymap";
 
@@ -105,6 +118,28 @@
 
                         /* Thumbs */
                                           &trans        &trans         &kp SPACE           &mt LGUI ESC &kp LCTRL &kp RALT
+                >;
+                };
+
+
+                bt_layer {
+                display-name = "BT Layer";
+
+                bindings = <
+                        // Row 1
+                        &trans   &trans   &trans       &trans   &trans   &trans
+                        &trans   &bt BT_SEL 0 &bt BT_SEL 1 &bt BT_SEL 2 &bt BT_CLR &trans
+
+                        // Row 2
+                        &trans   &trans   &trans       &trans   &trans   &trans
+                        &trans   &bt BT_SEL 3 &bt BT_SEL 4 &trans &trans &trans
+
+                        // Row 3
+                        &trans   &trans   &trans       &trans   &trans   &trans
+                        &trans   &trans   &trans       &trans   &trans   &trans
+
+                        // Thumbs
+                                  &trans   &trans       &trans   &trans   &trans   &trans
                 >;
                 };
 
