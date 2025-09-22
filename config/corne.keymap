@@ -26,7 +26,7 @@
 
         bt_combo {
             timeout-ms = <50>;
-            key-positions = <30 31>; // positions of Lower and Raise keys
+            key-positions = <36 37>; // First two thumb keys (mo 2 and mo 1)
             bindings = <&mo 3>;      // switch to BT layer (layer index 3)
         };
     };
@@ -125,20 +125,27 @@
                 bt_layer {
                 display-name = "BT Layer";
 
+                // ──────────────────────────────────────────────────────────────────────────────
+                // |      |      |      |      |      |      |   | BT0 | BT1 | BT2 | BT3 | BT4 | BTCLR|
+                // |      |      |      |      |      |      |   |     |     |     |     |     |      |
+                // |      |      |      |      |      |      |   |     |     |     |     |     |      |
+                //                      |      |      |      |   |     |     |     |
+                // ──────────────────────────────────────────────────────────────────────────────
+
                 bindings = <
-                        // Row 1
+                        // Row 1 - Left side inactive, right side BT functions
                         &trans   &trans   &trans       &trans   &trans   &trans
-                        &trans   &bt BT_SEL 0 &bt BT_SEL 1 &bt BT_SEL 2 &bt BT_CLR &trans
+                        &bt BT_SEL 0 &bt BT_SEL 1 &bt BT_SEL 2 &bt BT_SEL 3 &bt BT_SEL 4 &bt BT_CLR
 
-                        // Row 2
-                        &trans   &trans   &trans       &trans   &trans   &trans
-                        &trans   &bt BT_SEL 3 &bt BT_SEL 4 &trans &trans &trans
-
-                        // Row 3
+                        // Row 2 - All inactive
                         &trans   &trans   &trans       &trans   &trans   &trans
                         &trans   &trans   &trans       &trans   &trans   &trans
 
-                        // Thumbs
+                        // Row 3 - All inactive
+                        &trans   &trans   &trans       &trans   &trans   &trans
+                        &trans   &trans   &trans       &trans   &trans   &trans
+
+                        // Thumbs - All inactive
                                   &trans   &trans       &trans   &trans   &trans   &trans
                 >;
                 };
