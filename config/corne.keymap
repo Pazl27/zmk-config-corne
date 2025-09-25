@@ -63,7 +63,7 @@
                         &kp N          &kp M        &kp DE_COMMA &kp DE_DOT   &kp DE_MINUS &trans
 
                         // Thumbs
-                                        &mo 2      &mo 1        &kp SPACE    &mt LGUI ESC &kp LCTRL &kp LALT
+                                        &mo 2      &mo 1        &kp SPACE    &mt LALT ESC &kp LCTRL &kp LGUI
                 >;
                 };
 
@@ -91,7 +91,7 @@
                         &kp DE_LT      &kp DE_GT    &kp DE_LBKT  &kp DE_RBKT  &kp DE_TILDE &trans
 
                         /* Thumbs */
-                                        &trans      &trans       &kp SPACE    &mt LGUI ESC &kp LCTRL &kp LALT
+                                        &trans      &trans       &kp SPACE    &mt LALT ESC &kp LCTRL &kp LGUI
                 >;
                 };
 
@@ -119,7 +119,7 @@
                         &kp DE_ACUTE    &kp DE_GRAVE    &trans         &trans              &trans       &trans
 
                         /* Thumbs */
-                                          &trans        &trans         &kp SPACE           &mt LGUI ESC &kp LCTRL &kp LALT
+                                          &trans        &trans         &kp SPACE           &mt LALT ESC &kp LCTRL &kp LGUI
                 >;
                 };
 
