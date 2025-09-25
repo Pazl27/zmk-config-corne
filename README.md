@@ -13,6 +13,9 @@
 
 A custom ZMK firmware configuration for the Corne (CRKBD) split mechanical keyboard with German key layout and localization.
 
+![Top view](./screenshots/corne-top.jpg)
+![Side view](./screenshots/corne-side.jpg)
+
 ## 🔧 Hardware Components
 
 - **PCB**: Corne Cherry v3 from [Typeractive](https://typeractive.xyz/)
