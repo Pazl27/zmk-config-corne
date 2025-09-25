@@ -16,7 +16,7 @@ A custom ZMK firmware configuration for the Corne (CRKBD) split mechanical keybo
 ![Top view](./screenshots/corne-top.jpg)
 ![Side view](./screenshots/corne-side.jpg)
 
-## 🔧 Hardware Components
+## Hardware Components
 
 - **PCB**: Corne Cherry v3 from [Typeractive](https://typeractive.xyz/)
 - **Case**: Custom case sourced from [Etsy](https://www.etsy.com/de/listing/1772253702/corne-mx-koffer)
@@ -25,7 +25,7 @@ A custom ZMK firmware configuration for the Corne (CRKBD) split mechanical keybo
 - **Display**: Nice!View displays
 - **Layout**: German (DE) QWERTZ
 
-## 🎨 Display Configuration
+## Display Configuration
 
 The keyboards feature custom OLED display art sourced from [mctechnology17's zmk-nice-oled repository](https://github.com/mctechnology17/zmk-nice-oled). The displays show:
 - Current layer status
@@ -34,7 +34,7 @@ The keyboards feature custom OLED display art sourced from [mctechnology17's zmk
 - Battery level
 - Custom graphics and animations
 
-## ⌨️ Layout Overview
+## Layout Overview
 
 The configuration includes 4 main layers optimized for German typing and programming:
 
@@ -70,7 +70,7 @@ This ensures proper German character input including:
 - Special characters: €, °, §, µ, ², ³
 - Proper dead key behavior for accents
 
-## 🚀 Building and Flashing
+## Building and Flashing
 
 ### Prerequisites
 - [ZMK development environment](https://zmk.dev/docs/development/setup)
@@ -83,30 +83,12 @@ This ensures proper German character input including:
 4. Download the firmware files from the Actions artifacts
 5. Flash the `.uf2` files to your Nice!Nano v2 controllers
 
-### Local Build
-```bash
-# Clone the repository
-git clone https://github.com/yourusername/zmk-config-corne.git
-cd zmk-config-corne
-
-# Initialize ZMK
-west init -l config
-west update
-west zephyr-export
-
-# Build for left side
-west build -p -d build/left -b nice_nano_v2 -- -DSHIELD=corne_left -DZMK_CONFIG="$(pwd)/config"
-
-# Build for right side  
-west build -p -d build/right -b nice_nano_v2 -- -DSHIELD=corne_right -DZMK_CONFIG="$(pwd)/config"
-```
-
 ### Flashing
 1. Put the Nice!Nano into bootloader mode (double-tap reset)
 2. Copy the generated `.uf2` file to the mounted drive
 3. Repeat for the second half
 
-## 📁 Repository Structure
+## Repository Structure
 
 ```
 ├── .github/
