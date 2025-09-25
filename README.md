@@ -108,7 +108,7 @@ This ensures proper German character input including:
 └── README.md               # This file
 ```
 
-## 🎯 Key Features
+## Key Features
 
 - **Wireless Operation**: Powered by Nice!Nano v2 with ZMK firmware
 - **German Layout**: Full German QWERTZ support with proper localization
@@ -117,7 +117,7 @@ This ensures proper German character input including:
 - **Low Power**: Optimized for battery life with sleep modes
 - **Customizable**: Easy to modify layouts and add features
 
-## 🙏 Acknowledgments
+## Acknowledgments
 
 - **Hardware**: [Typeractive](https://typeractive.xyz/) for the excellent Corne PCB
 - **Display Art**: [mctechnology17](https://github.com/mctechnology17/zmk-nice-oled) for the beautiful OLED graphics
@@ -125,7 +125,7 @@ This ensures proper German character input including:
 - **Firmware**: [ZMK Firmware](https://zmk.dev/) team for the amazing wireless keyboard firmware
 - **Community**: The mechanical keyboard and ZMK communities for inspiration and support
 
-## 📄 License
+## License
 
 This configuration is released under the MIT License. See the ZMK documentation for firmware licensing information.
 
