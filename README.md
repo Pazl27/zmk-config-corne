@@ -60,7 +60,7 @@ The configuration includes 4 main layers optimized for German typing and program
 - Profile switching (supports up to 5 devices)
 - Reset and bootloader access
 
-## 🇩🇪 German Localization
+## German Localization
 
 The German key definitions are generated using the [ZMK Locale Generator](https://github.com/joelspadin/zmk-locale-generator) and can be found in [`config/keys_de.h`](config/keys_de.h).
 
