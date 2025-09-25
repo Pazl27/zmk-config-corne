@@ -2,10 +2,10 @@
 
 <div align="center">
 <p>
-<a href="https://github.com/Pazl27/zmk-config-corne/stargazers"><img src="https://img.shields.io/github/stars/yourusername/zmk-config-corne?style=for-the-badge&logo=starship&color=d79921&logoColor=d79921&labelColor=282828"  alt="stars"></a>&nbsp;&nbsp;
-<a href="https://github.com/Pazl27/zmk-config-corne/forks"><img src="https://img.shields.io/github/forks/yourusername/zmk-config-corne?style=for-the-badge&logo=appveyor&logoColor=98971a&label=Forks&labelColor=282828&color=98971a" alt="forks"></a>&nbsp;&nbsp;
-<a href="https://github.com/Pazl27/zmk-config-corne/commits/master/"><img src="https://img.shields.io/github/last-commit/yourusername/zmk-config-corne?style=for-the-badge&logo=github&logoColor=fb4934&label=Last%20Commit&labelColor=282828&color=fb4934" alt="last commit"></a>&nbsp;&nbsp;
-<a href="https://github.com/Pazl27/zmk-config-corne/blob/master/LICENSE"><img src="https://img.shields.io/github/license/yourusername/zmk-config-corne?style=for-the-badge&color=b16286&logoColor=b16286&labelColor=282828" alt="license"></a>&nbsp;&nbsp;
+<a href="https://github.com/Pazl27/zmk-config-corne/stargazers"><img src="https://img.shields.io/github/stars/Pazl27/zmk-config-corne?style=for-the-badge&logo=starship&color=d79921&logoColor=d79921&labelColor=282828"  alt="stars"></a>&nbsp;&nbsp;
+<a href="https://github.com/Pazl27/zmk-config-corne/forks"><img src="https://img.shields.io/github/forks/Pazl27/zmk-config-corne?style=for-the-badge&logo=appveyor&logoColor=98971a&label=Forks&labelColor=282828&color=98971a" alt="forks"></a>&nbsp;&nbsp;
+<a href="https://github.com/Pazl27/zmk-config-corne/commits/master/"><img src="https://img.shields.io/github/last-commit/Pazl27/zmk-config-corne?style=for-the-badge&logo=github&logoColor=fb4934&label=Last%20Commit&labelColor=282828&color=fb4934" alt="last commit"></a>&nbsp;&nbsp;
+<a href="https://github.com/Pazl27/zmk-config-corne/blob/master/LICENSE"><img src="https://img.shields.io/github/license/Pazl27/zmk-config-corne?style=for-the-badge&color=b16286&logoColor=b16286&labelColor=282828" alt="license"></a>&nbsp;&nbsp;
 </p>
 </div>
 
