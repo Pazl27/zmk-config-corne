@@ -129,7 +129,7 @@
 
                 // ──────────────────────────────────────────────────────────────────────────────
                 // |      |      |      |      |      |      |   | BT0 | BT1 | BT2 | BT3 | BT4 | BTCLR|
-                // |      |      |      |      |      |      |   |     |     |     |     |     |      |
+                // |      |      |      |      |      |      |   | ZSU |     |     |     |     |      |
                 // |      |      |      |      |      |      |   |     |     |     |     |     |      |
                 //                      |      |      |      |   |     |     |     |
                 // ──────────────────────────────────────────────────────────────────────────────
@@ -141,7 +141,7 @@
 
                         // Row 2 - All inactive
                         &trans   &trans   &trans       &trans   &trans   &trans
-                        &trans   &trans   &trans       &trans   &trans   &trans
+                        &trans   &trans   &trans       &studio_unlock   &trans   &trans
 
                         // Row 3 - All inactive
                         &trans   &trans   &trans       &trans   &trans   &trans
