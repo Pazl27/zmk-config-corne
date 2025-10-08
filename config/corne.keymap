@@ -141,7 +141,7 @@
 
                         // Row 2 - All inactive
                         &trans   &trans   &trans       &trans   &trans   &trans
-                        &trans   &trans   &trans       &studio_unlock   &trans   &trans
+                        &studio_unlock   &trans   &trans       &trans   &trans   &trans
 
                         // Row 3 - All inactive
                         &trans   &trans   &trans       &trans   &trans   &trans
